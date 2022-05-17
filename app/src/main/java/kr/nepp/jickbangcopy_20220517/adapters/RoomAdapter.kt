@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import kr.nepp.jickbangcopy_20220517.R
 import kr.nepp.jickbangcopy_20220517.datas.RoomData
 
@@ -25,6 +26,10 @@ class RoomAdapter(
         }
 
         val row = tempRow!!
+
+        val data = mList[position]
+
+
 
         return row
     }

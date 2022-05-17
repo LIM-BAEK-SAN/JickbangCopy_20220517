@@ -34,7 +34,7 @@ class RoomAdapter(
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
 //        실제 연결
-        txtPrice.text = data.price.toString()
+        txtPrice.text = data.getFormattedPrice()
         txtAddressFloor.text = "${data.address}, ${data.getFormattedFloor()}"
         txtDescription.text = data.description
 

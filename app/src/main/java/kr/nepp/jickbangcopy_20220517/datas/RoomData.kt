@@ -20,6 +20,20 @@ class RoomData(
         }
 
     }
+
+    fun getFormattedPrice() : String{
+
+        if (this.price < 10000) {
+            return "%,d".format(price)
+        }
+        else{
+            val uk = this.price / 10000 //정수와 정수의 나눗셈은 정수
+            val rest = this.price % 10000 //나머지 정수
+
+            return "${uk}억 ${"%, d".format(rest)}"
+        }
+
+    }
 }
 
 

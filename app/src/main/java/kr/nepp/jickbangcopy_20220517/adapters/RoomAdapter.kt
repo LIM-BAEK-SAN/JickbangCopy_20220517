@@ -29,7 +29,14 @@ class RoomAdapter(
 
         val data = mList[position]
 
+        val txtPrice = row.findViewById<TextView>(R.id.txtPrice)
+        val txtAddressFloor = row.findViewById<TextView>(R.id.txtAddressFloor)
+        val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
+//        실제 연결
+        txtPrice.text = data.price.toString()
+        txtAddressFloor.text = data.address + ", " + data.floor + "층"
+        txtDescription.text = data.description
 
         return row
     }

@@ -35,7 +35,7 @@ class RoomAdapter(
 
 //        실제 연결
         txtPrice.text = data.price.toString()
-        txtAddressFloor.text = data.address + ", " + data.floor + "층"
+        txtAddressFloor.text = "${data.address}, ${data.getFormattedFloor()}"
         txtDescription.text = data.description
 
         return row
